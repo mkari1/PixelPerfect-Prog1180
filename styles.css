@@ -1,0 +1,829 @@
+/* INDEX: lines 2 - 107 */
+body {
+    font-family: 'DM Serif Display', serif;
+    background-color: #E9F0F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-size: 18px; /* Increase the base font size */
+}
+
+h1, header {
+    font-family: 'Pacifico', cursive;
+    color: #388E3C;
+    text-align: center;
+    width: 100%;
+    font-size: 2em; /* Make the title bigger */
+}
+
+header, footer {
+    background-color: #8BC34A;
+    padding: 15px 0;
+    width: 100%;
+}
+
+p, ul {
+    color: #3E5B4D;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#about, #services, #contact {
+    padding: 20px;
+    width: 80%; /* Adjusted width for better spacing */
+}
+
+#contact {
+    text-align: center;
+    margin-top: auto; /* Push it to the bottom */
+}
+
+/* Responsive styles for tablet and mobile screens */
+@media (max-width: 768px) { /* Tablet breakpoint */
+    #about, #services, #contact {
+        width: 90%; /* Take up more width on smaller screens for better utilization of space */
+    }
+}
+
+@media (max-width: 480px) { /* Phone breakpoint */
+    body {
+        font-size: 16px; /* Adjust the font size for mobile screens */
+    }
+
+    h1, header {
+        font-size: 1.8em; /* Adjust title size for mobile screens */
+    }
+}
+
+/* Styling for the footer text */
+footer p {
+    text-align: center;
+    margin: 0;
+    padding: 5px 0; /* Some padding for vertical spacing */
+}
+
+/* Hamburger Menu Styles */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;  /* Make the icon fixed on the screen */
+    top: 15px;
+    left: 15px;
+    z-index: 10; /* Ensure it's above other content */
+}
+
+.nav-menu {
+    position: fixed; /* Fixed positioning to show/hide off the side of the page */
+    top: 0;
+    left: -250px; /* Initially hidden off the left of the viewport */
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s; /* Animation effect */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 50px;  /* Space at the top below the menu icon */
+}
+
+#menu-toggle:checked + .menu-icon + .nav-menu {
+    left: 0;  /* When menu is toggled, it moves into the viewport */
+}
+
+#menu-toggle {
+    position: absolute;
+    top: -9999px;  /* Move it off-screen */
+    left: -9999px;  /* Move it off-screen */
+}
+
+
+
+
+
+/* CUSTOMER INFO: lines 110 - 227*/
+/* General Styles */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #E9F0F8;
+    font-family: 'Gabarito', sans-serif; /* Assuming Gabarito is the default font */
+}
+
+/* Header & Footer Styles */
+header, footer {
+    background-color: #8BC34A;
+    width: 100%;  /* This ensures the header/footer take up the full width of the screen */
+    padding: 20px 0;
+    text-align: center;
+    box-sizing: border-box;  /* This ensures padding doesn't add to total width */
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer p {
+    color: #3E5B4D;
+    margin: 0;
+}
+
+/* Main Content Styles */
+.container {
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 20px auto;  /* Added top and bottom margin for spacing */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    color: #194D33;
+    margin-top: 0;
+}
+
+label, input[type="text"], input[type="button"] {
+    color: #3E5B4D;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #3E5B4D;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="button"] {
+    background-color: #8BC34A;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #6FAA36;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .menu-wrapper .nav-menu {
+        flex-direction: column;
+    }
+
+    .menu-wrapper .nav-menu a {
+        margin: 5px 0;
+    }
+}
+
+/* Hamburger Menu Styles */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;  /* Make the icon fixed on the screen */
+    top: 15px;
+    left: 15px;
+    z-index: 10; /* Ensure it's above other content */
+}
+
+.nav-menu {
+    position: fixed; /* Fixed positioning to show/hide off the side of the page */
+    top: 0;
+    left: -250px; /* Initially hidden off the left of the viewport */
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s; /* Animation effect */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 50px;  /* Space at the top below the menu icon */
+}
+
+#menu-toggle:checked + .menu-icon + .nav-menu {
+    left: 0;  /* When menu is toggled, it moves into the viewport */
+}
+
+#menu-toggle {
+    position: absolute;
+    top: -9999px;  /* Move it off-screen */
+    left: -9999px;  /* Move it off-screen */
+}
+
+
+
+
+
+/* CUSTOMER REGISTRATION: lines */
+/* General Styles */
+body {
+    font-family: 'Gabarito', sans-serif;
+    background-color: #E9F0F8;
+    margin: 0;
+    padding: 0;
+    color: #3E5B4D;
+}
+
+header, footer {
+    background-color: #8BC34A;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+h2, legend {
+    font-family: 'DM Serif Display', serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+nav a {
+    font-family: 'Gabarito', sans-serif; /* Set the same font for menu items */
+    color: #3E5B4D;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.menu-icon {
+    order: -1;  /* Place the menu icon on the left */
+    margin-right: auto; /* Push the items to the right */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    background-color: #ffffff;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label, select, input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+select, input[type="text"], input[type="email"], input[type="tel"] {
+    border: 1px solid #3E5B4D;
+    color: #3E5B4D;
+    border-radius: 5px;
+}
+
+input[type="Save"] {
+    background-color: #8BC34A;
+    border: none;
+    padding: 12px 24px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 5px;
+}
+
+input[type="Save"]:hover {
+    background-color: #6FAA36;
+}
+
+footer p {
+    color: #3E5B4D;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    header img {
+        max-width: 70%;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    header img {
+        max-width: 60%;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+    header img {
+        max-width: 55%;
+    }
+}
+
+
+
+
+
+/* SUPPORT PAGE: lines 369 - 492 */
+/* General Styles */
+body {
+    background-color: #E9F0F8;
+    font-family: 'Gabarito', sans-serif; /* Using Gabarito as the default font */
+    margin: 0;
+    padding: 0;
+    color: #3E5B4D; /* Default text color */
+}
+
+/* Navigation Menu Styles */
+nav {
+    background-color: #8BC34A;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-sizing: border-box; /* Ensures padding doesn't add to total width */
+}
+
+nav a {
+    color: #3E5B4D;
+    margin: 0 15px;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+.container {
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: 'DM Serif Display', serif; /* Using DM Serif Display for the main heading */
+    color: #194D33;
+    margin-top: 0;
+}
+
+h3 {
+    font-family: 'DM Serif Display', serif;
+    color: #194D33;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #3E5B4D;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #8BC34A;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #fff; /* White text color for the button */
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #6FAA36;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+/* Hamburger Menu Styles */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;  /* Make the icon fixed on the screen */
+    top: 15px;
+    left: 15px;
+    z-index: 10; /* Ensure it's above other content */
+}
+
+.nav-menu {
+    position: fixed; /* Fixed positioning to show/hide off the side of the page */
+    top: 0;
+    left: -250px; /* Initially hidden off the left of the viewport */
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s; /* Animation effect */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 50px;  /* Space at the top below the menu icon */
+}
+
+#menu-toggle:checked + .menu-icon + .nav-menu {
+    left: 0;  /* When menu is toggled, it moves into the viewport */
+}
+
+#menu-toggle {
+    position: absolute;
+    top: -9999px;  /* Move it off-screen */
+    left: -9999px;  /* Move it off-screen */
+}
+
+
+
+
+
+/* EQUIPMENT VIEW: lines 499 - 610 */
+/* General Styles */
+body {
+    background-color: #E9F0F8;
+    font-family: 'Gabarito', sans-serif; /* Using Gabarito as the default font */
+    margin: 0;
+    padding: 0;
+    color: #3E5B4D; /* Default text color */
+}
+
+/* Navigation Menu Styles */
+nav {
+    background-color: #8BC34A;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-sizing: border-box; /* Ensures padding doesn't add to total width */
+}
+
+nav a {
+    color: #3E5B4D;
+    margin: 0 15px;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+.container {
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: 'DM Serif Display', serif; /* Using DM Serif Display for the main heading */
+    color: #194D33;
+    margin-top: 0;
+    margin-bottom: 20px; /* Provide some spacing between the title and the table */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #3E5B4D;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #E9F0F8;
+}
+
+.equipment-link:hover {
+    text-decoration: none;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+/* Hamburger Menu Styles */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;  /* Make the icon fixed on the screen */
+    top: 15px;
+    left: 15px;
+    z-index: 10; /* Ensure it's above other content */
+}
+
+.nav-menu {
+    position: fixed; /* Fixed positioning to show/hide off the side of the page */
+    top: 0;
+    left: -250px; /* Initially hidden off the left of the viewport */
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s; /* Animation effect */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 50px;  /* Space at the top below the menu icon */
+}
+
+#menu-toggle:checked + .menu-icon + .nav-menu {
+    left: 0;  /* When menu is toggled, it moves into the viewport */
+}
+
+#menu-toggle {
+    position: absolute;
+    top: -9999px;  /* Move it off-screen */
+    left: -9999px;  /* Move it off-screen */
+}
+
+
+
+
+
+/* EQUPMENT DETAILS: lines 617 - 738 */ 
+/* General Styles */
+body {
+    background-color: #E9F0F8;
+    font-family: 'Gabarito', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #3E5B4D;
+}
+
+/* Navigation Menu Styles */
+nav {
+    background-color: #8BC34A;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+nav a {
+    color: #3E5B4D;
+    margin: 0 15px;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+.container {
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: 'DM Serif Display', serif;
+    color: #194D33;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+input[type="text"], textarea, select {
+    padding: 10px;
+    border: 1px solid #3E5B4D;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button {
+    background-color: #8BC34A;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #6FAA36;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+/* Hamburger Menu Styles */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;  /* Make the icon fixed on the screen */
+    top: 15px;
+    left: 15px;
+    z-index: 10; /* Ensure it's above other content */
+}
+
+.nav-menu {
+    position: fixed; /* Fixed positioning to show/hide off the side of the page */
+    top: 0;
+    left: -250px; /* Initially hidden off the left of the viewport */
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s; /* Animation effect */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 50px;  /* Space at the top below the menu icon */
+}
+
+#menu-toggle:checked + .menu-icon + .nav-menu {
+    left: 0;  /* When menu is toggled, it moves into the viewport */
+}
+
+#menu-toggle {
+    position: absolute;
+    top: -9999px;  /* Move it off-screen */
+    left: -9999px;  /* Move it off-screen */
+}
+
+
+
+
+
+/* EQUIPMENT REGISTRATION: lines 743 - 829 */
+/* General Styles */
+body {
+    background-color: #E9F0F8;
+    font-family: 'Gabarito', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #3E5B4D;
+}
+
+/* Navigation Menu Styles */
+nav {
+    background-color: #8BC34A;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+nav a {
+    color: #3E5B4D;
+    margin: 0 15px;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+.container {
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: 'DM Serif Display', serif;
+    color: #194D33;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+input[type="text"], textarea, select {
+    padding: 10px;
+    border: 1px solid #3E5B4D;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="button"] {
+    background-color: #8BC34A;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+input[type="button"]:hover {
+    background-color: #6FAA36;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
